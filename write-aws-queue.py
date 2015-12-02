@@ -29,9 +29,8 @@ secret_access_key = word2
 conn = boto.sqs.connect_to_region("eu-west-1", aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key)
 
 # Gets a queue and prints a message along side it 
-student_no = 'c13730921-'
 
-q_name = student_no + sys.argv[1]
+q_name = sys.argv[1]
 
 queue = conn.get_queue(q_name)
 
